@@ -4,7 +4,6 @@
 
 ![Guts](images/guts.jpg)
 
-![Avatar](https://example.com/your-avatar.jpg)
 
 ## 📝 Despre mine
 
