@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #100e0e;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: linear-gradient(0deg, #100e0e, #100e0e), #ffffff;
+  color: #f4f0f0;
+  font-family:
+    "Geist Mono", "SF Mono", "SFMono-Regular", ui-monospace, "Cascadia Code",
+    "Source Code Pro", Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+::selection {
+  background: #f4f0f0;
+  color: #100e0e;
+}
+
+.shopify-burst {
+  animation: shopify-burst 1320ms linear forwards;
+  animation-delay: var(--shopify-delay);
+  transform: translate(-50%, -50%);
+  transform-origin: center;
+}
+
+@keyframes shopify-burst {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.12) rotate(0deg);
+  }
+
+  12% {
+    opacity: 1;
+    transform:
+      translate(
+        calc(-50% + (var(--shopify-x) * 0.16)),
+        calc(-50% + (var(--shopify-y) * 0.14))
+      )
+      scale(var(--shopify-scale))
+      rotate(calc(var(--shopify-rotate) * 0.18));
+  }
+
+  58% {
+    opacity: 0.92;
+    transform:
+      translate(
+        calc(-50% + (var(--shopify-x) * 0.72)),
+        calc(-50% + (var(--shopify-y) * 0.72))
+      )
+      scale(calc(var(--shopify-scale) * 0.84))
+      rotate(calc(var(--shopify-rotate) * 0.72));
+  }
+
+  100% {
+    opacity: 0;
+    transform:
+      translate(calc(-50% + var(--shopify-x)), calc(-50% + var(--shopify-y)))
+      scale(0.12)
+      rotate(var(--shopify-rotate));
+  }
+}
