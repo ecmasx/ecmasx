@@ -1,1 +1,1 @@
-Simple static site.
+My simple website.
