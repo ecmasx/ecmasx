@@ -3,36 +3,29 @@
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
+  flex: 1;
+  max-width: 800px;
   min-height: 100svh;
-  padding: 32px max(32px, calc((100% - 1024px) / 2)) 496px;
+  padding: 32px;
   background: #fdfdfd;
   color: #111;
   font: 18px/28px Lora, Georgia, serif;
   -webkit-font-smoothing: antialiased;
 }
 
-::selection,
-::-moz-selection {
-  background: #111;
-  color: #fdfdfd;
-}
-
 a {
   color: inherit;
   position: relative;
   text-decoration: none;
-  text-decoration-thickness: 1.5px;
-  text-decoration-color: #000;
-  text-underline-offset: 2px;
 
   &::after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -2px;
+    bottom: -1px;
     width: 100%;
-    height: 1.2px;
+    height: 1px;
     background: #000;
     transform: scaleX(1);
     transform-origin: left;
